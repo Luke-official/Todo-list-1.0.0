@@ -1,0 +1,211 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+html {
+	font-size: 62, 5%;
+}
+
+body {
+	font-family: "Poppins", sans-serif;
+	background: #121212;
+	min-height: 100vh;
+}
+
+header {
+	font-size: 1.7rem;
+	background-color: #ffbb00;
+	justify-content: space-evenly;
+	min-height: 20vh;
+	display: flex;
+	align-items: center;
+}
+
+header img {
+	height: 3em;
+	margin: 0.5em;
+	border: 4px solid black;
+	border-radius: 0.5em;
+}
+
+h1 i {
+	margin-right: 0.5em;
+}
+
+form {
+	min-height: 20vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+form input,
+form button {
+	padding: 0.5rem;
+	font-size: 2em;
+	border: none;
+	background: white;
+}
+
+form button {
+	color: #000000;
+	background: #ffbb00;
+	cursor: pointer;
+	transition: all 0.3s ease;
+}
+
+form button:hover {
+	background: #000000;
+	color: #ffbb00;
+}
+
+.todo-input {
+	border-radius: 5px 0 0 5px;
+}
+
+.todo-button,
+.trash-btn {
+	border-radius: 0 5px 5px 0;
+}
+
+.select,
+.todo {
+	border-radius: 5px 5px 5px 5px;
+}
+
+.todo-container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.todo-list {
+	min-width: 30%;
+	list-style-type: none;
+}
+
+.todo {
+	margin: 0.6rem;
+	background: white;
+	color: black;
+	font-size: 1.5em;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	transition: all 0.5s ease;
+}
+
+.todo li {
+	flex: 1;
+}
+
+.trash-btn,
+.complete-btn {
+	background: #ffbb00;
+	color: white;
+	border: none;
+	font-size: 1rem;
+	padding: 1rem;
+	cursor: pointer;
+}
+
+.complete-btn {
+	background: rgb(35, 230, 45);
+}
+
+.todo-item {
+	padding: 0 0.5rem;
+}
+
+.fa-trash,
+.fa-check {
+	pointer-events: none;
+}
+
+.completed {
+	text-decoration: line-through;
+	opacity: 0.5;
+}
+
+.fall {
+	transform: translateY(3.5em) rotateZ(0deg);
+	opacity: 0;
+}
+
+select {
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	outline: none;
+	border: none;
+}
+
+select {
+	color: #000000;
+	width: 12rem;
+	cursor: pointer;
+	padding: 0.66em;
+	font-size: 1.3em;
+}
+
+.select {
+	margin: 1rem;
+	position: relative;
+	overflow: hidden;
+}
+
+.select option {
+	background-color: #121212;
+	color: #ffbb00;
+	border: none;
+	border-radius: 10px;
+}
+
+.select::after {
+	content: "\25BC";
+	position: absolute;
+	background: #ffbb00;
+	top: 0;
+	right: 0;
+	padding: 1rem;
+	pointer-events: none;
+	transition: all 0.3s ease;
+}
+
+.select:hover::after {
+	background: #000000;
+	color: #ffbb00;
+}
+
+@media screen and (max-width: 992px) {
+	header {
+		display: flex;
+		justify-content: center;
+		flex-direction: column-reverse;
+		font-size: 1.4em;
+	}
+	.pino {
+		order: 1;
+	}
+	form input {
+		margin-left: 0.2em;
+		max-width: 50vw;
+	}
+}
+
+@media screen and (max-width: 350px) {
+	header {
+		display: flex;
+		justify-content: center;
+		flex-direction: column-reverse;
+		font-size: 1em;
+	}
+	.pino {
+		order: 1;
+	}
+	form input {
+		margin-left: 0.2em;
+		max-width: 40vw;
+	}
+}

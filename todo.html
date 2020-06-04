@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+      <link rel="icon" href="img/favicon.ico" type="image/x-icon">
+      <link href="https://fonts.googleapis.com/css?family=Poppins&display=swap" rel="stylesheet">
+      <link rel="stylesheet" 
+         href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" 
+         integrity="sha256-h20CPZ0QyXlBuAw7A+KluUYx/3pK+c7lYEpqLTlxjYQ=" 
+         crossorigin="anonymous" />
+      <link href="https://fonts.googleapis.com/icon?family=Material+Icons"rel="stylesheet">
+      <link href="./todo.css" rel="stylesheet">
+      <title>Todo List</title>
+   </head>
+   <body>
+      <header>
+         <a class="pino" href="#"><img src="img/PJ_logo.jpg"></a>
+         <h1><i class="fa fa-list"></i>TO-DO List</h1>
+         <br>
+         <h3>Pino Johnson Edition&copy;</h3>
+         </li>
+      </header>
+      <form>
+         <input type="text" class="todo-input">
+         <button class="todo-button" type="submit">
+         <i class="fas fa-plus-square"></i>
+         </button>
+         <div class="select">
+            <select name="todos" class="filter-todo">
+               <option value="all">All</option>
+               <option value="uncompleted">To-Do</option>
+               <option value="completed">Done</option>
+            </select>
+         </div>
+      </form>
+      <div class="todo-container">
+         <ul class="todo-list"></ul>
+      </div>
+      <script src="./todo.js"></script>
+   </body>
+</html>
